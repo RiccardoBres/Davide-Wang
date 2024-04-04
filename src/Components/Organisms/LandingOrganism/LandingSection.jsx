@@ -6,7 +6,7 @@ import './landing.css';
 const LandingSection = () => {
     return (
         <Container fluid className="landing-section">
-            <Row>
+            <Row className='w-100'>
                 <Col lg={12} md={12} sm={12} xs={12} className='p-0'>
                     <IntroLanding />
                 </Col>

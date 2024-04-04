@@ -13,15 +13,13 @@
 }
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
+  gap: 70%;
+  padding: 10px 0;
   width: 100%;
   position: fixed;
   color: rgb(252, 252, 252);
-  padding-left: 20px;
-  padding-right: 20px;
   min-height: 70px;
-  height: 70px;
   transition: background-color 1s ease;
   z-index: 99;
 }
@@ -37,15 +35,18 @@
 }
 
 .scrolled {
-  background-color: #423C38;
+  background-color: rgba(66, 60, 56, 0.5176470588);
   color: rgb(252, 252, 252);
+  backdrop-filter: blur(3px);
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    gap: 60%;
+  }
   .scrolled {
-    justify-content: space-evenly;
-    gap: 65%;
-    padding: 0;
+    height: auto;
+    min-height: auto;
   }
 }
 .footer {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 import CustomParagraph from '../../Atoms/CustomParagraph';
+import CustomTitle from '../../Atoms/CustomTitle';
 
 const CustomNavbar = () => {
  const [isMobile, setIsMobile] = useState(false);
@@ -38,7 +39,7 @@ const CustomNavbar = () => {
 
  return (
     <div className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <CustomParagraph text='D/Wang' className='small-p' />
+      <CustomTitle text='Wang' className='small-title' />
       {isMobile ? (
         <GiHamburgerMenu className='menu-icon' onClick={handleMenuClick} />
       ) : (
