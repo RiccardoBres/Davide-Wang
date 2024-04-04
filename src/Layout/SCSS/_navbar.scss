@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    color: $color-white;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 70px;
+    transition: background-color 1s ease;
+    z-index: 99;
+
+    .container-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+.navbar p{
+    cursor: pointer;
+}
+
+.scrolled{
+    background-color: #423c38c0;
+    color: $color-white;
+}

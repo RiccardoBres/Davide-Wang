@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "PPEditorialNew-Regular";
+  src: url("../Fonts/PPEditorialNew-Regular.otf") format("opentype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "PPNEUEMONTREAL-THIN";
+  src: url("../Fonts/PPNEUEMONTREAL-THIN.OTF") format("opentype");
+}
+@font-face {
+  font-family: "Salty-Feathers-Demo";
+  src: url("../Fonts/Salty-Feathers-Demo.otf") format("opentype");
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  color: rgb(252, 252, 252);
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 70px;
+  transition: background-color 1s ease;
+  z-index: 99;
+}
+.navbar .container-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navbar p {
+  cursor: pointer;
+}
+
+.scrolled {
+  background-color: rgba(66, 60, 56, 0.7529411765);
+  color: rgb(252, 252, 252);
+}
+
+.footer {
+  min-height: 40vh;
+  background-color: #423C38;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.footer .row-content {
+  padding-top: 5rem !important;
+}
+.footer .container-footer {
+  display: flex;
+  justify-content: space-evenly;
+  color: #F3EBE1;
+}
+.footer .info-footer h2 {
+  font-size: 16px;
+  cursor: pointer;
+}
+.footer .container-social-icons-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #F3EBE1;
+}
+.footer .footer-icons svg {
+  cursor: pointer;
+  margin: 20px 5px;
+  font-size: 25px;
+}
+@media (max-width: 768px) {
+  .footer .row-content {
+    padding-top: 1rem !important;
+  }
+  .footer .container-footer {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  .footer .info-footer,
+  .footer .footer-icons {
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+  }
+}
+
+/* sass --watch _main.scss output.css */
+body {
+  /*     font-family: $font-primary;
+   */
+  line-height: 1.6;
+  background-color: #F3EBE1;
+}
+
+p {
+  font-family: "PPNEUEMONTREAL-THIN", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*     font-family: 'PPEditorialNew-Regular', sans-serif; 
+      letter-spacing: 32px; */
+  font-family: "Salty-Feathers-Demo", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 8px;
+}
+
+.white {
+  color: rgb(252, 252, 252) !important;
+}
+
+a {
+  color: #423C38;
+  text-decoration: none;
+  font-family: "PPEditorialNew-Regular", sans-serif;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #626F80;
+}
+
+.slide-from-left, .button.slide-from-left {
+  transform: translateX(-100%);
+  opacity: 1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  visibility: hidden;
+}
+
+.slide-from-right {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  visibility: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.scale-up {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #CBB09B;
+  color: #070606;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #626F80;
+  color: #F3EBE1;
+}
+
+.small-title {
+  font-size: 2.4em;
+}
+
+.medium-title {
+  font-size: 3.8em;
+}
+
+.big-title {
+  font-size: 5.8em;
+}
+
+.very-big-title {
+  font-size: 8.5em;
+}
+
+.small-p {
+  font-size: 1em;
+}
+
+.medium-p {
+  font-size: 1.2em;
+}
+
+.big-p {
+  font-size: 1.4em;
+}
+
+.very-big-p {
+  font-size: 1.8em;
+}
+
+/*# sourceMappingURL=output.css.map */

@@ -1,0 +1,22 @@
+.card-image-beverage{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  position: relative;
+}
+.card-image{
+    width: 100%;
+    height: auto;
+}
+.info-card{
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    width: 90%;
+    background:#CBB09B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}

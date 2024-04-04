@@ -1,0 +1,27 @@
+.container-experience {
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+.container-experience h2 {
+    text-align: center;
+}
+
+.col-relative {
+    position: relative;
+}
+
+@media(max-width: 768px) {
+    .container-experience .row {
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .col-relative {
+        position: static;
+    }
+}

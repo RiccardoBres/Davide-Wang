@@ -1,0 +1,39 @@
+$color-white:rgb(252, 252, 252);
+$color-eggWhite: #F3EBE1;
+$color-amaretto: #CBB09B;
+$color-rhum: rgb(158, 145, 137);
+$color-blueberry: #626F80;
+$color-espresso:#423C38;
+$color-dark: #070606;
+
+
+$font-primary-path: '../Fonts/PPEditorialNew-Regular.otf'; 
+$font-secondary-path: '../Fonts/PPNEUEMONTREAL-THIN.OTF'; 
+$font-third-path: '../Fonts/Salty-Feathers-Demo.otf'; 
+
+
+@font-face {
+    font-family: 'PPEditorialNew-Regular';
+    src: url('#{$font-primary-path}') format('opentype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'PPNEUEMONTREAL-THIN';
+    src: url('#{$font-secondary-path}') format('opentype');
+}
+@font-face {
+    font-family: 'Salty-Feathers-Demo';
+    src: url('#{$font-third-path}') format('opentype');
+}
+
+
+$text-small-p: 1em;
+$text-medium-p: 1.2em;
+$text-large-p: 1.4em;
+$text-extra-large-p: 1.8em;
+
+$text-small-title: 2.4em;
+$text-medium-title: 3.8em;
+$text-large-title: 5.8em;
+$text-extra-large-title: 8.5em;

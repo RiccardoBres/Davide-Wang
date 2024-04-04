@@ -1,0 +1,10 @@
+.container-concept-creation{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5rem;
+}
+.container-concept-creation h2{
+    text-align: center;
+}

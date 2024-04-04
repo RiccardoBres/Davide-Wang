@@ -1,0 +1,22 @@
+.container-beverage-consulting{
+    min-height: 130vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 5rem;
+
+}
+.container-beverage-consulting h2{
+    text-align: center;
+    
+}
+@media(max-width:768px) {
+  .container-beverage-consulting h2 {
+    font-size: 2rem;
+  }
+  .container-beverage-consulting .row{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+}
