@@ -8,7 +8,7 @@ const IntroLanding = () => {
     return (
         <div className="container-intro">
             <div className='div1'>
-                <CustomParagraph text="Creator & Consultant" className='medium-p white m-0' />
+                <CustomParagraph text="Creator & Consultant" className='small-p white m-0' />
             </div>
 
             <div className="container-intro-name div3">
@@ -19,8 +19,8 @@ const IntroLanding = () => {
                 </div>
             </div>
             <div className="div5">
-                <CustomCurvedText circularText="Beverage" text="Consulting" className='medium-p white' />
-                <CustomCurvedText circularText="Concept" text="Creation" className='medium-p white' />
+                <CustomCurvedText circularText="Beverage" text="Consulting" className='small-p white' />
+                <CustomCurvedText circularText="Concept" text="Creation" className='small-p white' />
             </div>
             <div className="div6">
 

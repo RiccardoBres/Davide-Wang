@@ -8,3 +8,13 @@
 .container-concept-creation h2{
     text-align: center;
 }
+
+@media(max-width:768px) {
+    .container-concept-creation h2{
+        margin: 6rem 0;
+        font-size: 2.8rem;
+    }
+    .container-concept-creation{
+        padding-bottom: 0;
+    }
+  }

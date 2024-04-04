@@ -30,7 +30,7 @@ const creationData = [
 const ConceptCreation = () => {
     return (
         <Container className='container-concept-creation'>
-            <CustomTitle text="Concept & Creation" className="medium-title my-5" />
+            <CustomTitle text="Concept & Creation" className="medium-title" />
             <Row>
                 {conceptData.map((concept) => (
                     <Col lg={6} md={6} sm={12} xs={12} key={concept.id}>

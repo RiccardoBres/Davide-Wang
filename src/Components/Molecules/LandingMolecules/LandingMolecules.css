@@ -8,7 +8,10 @@
 
 @media(max-width:768px) {
     .container-intro h2 {
-        font-size: 3rem;
+        font-size: 3.8rem;
+        letter-spacing: 12px;
+        font-weight: 800;
+        font-style: italic;
     }
 
     .container-intro-name {

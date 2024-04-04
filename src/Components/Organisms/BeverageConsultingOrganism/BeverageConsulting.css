@@ -11,6 +11,9 @@
     
 }
 @media(max-width:768px) {
+  .container-beverage-consulting{
+    min-height: 100vh!important;
+  }
   .container-beverage-consulting h2 {
     font-size: 2rem;
   }
