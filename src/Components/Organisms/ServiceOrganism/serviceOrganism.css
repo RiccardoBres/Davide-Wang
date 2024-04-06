@@ -57,6 +57,12 @@
 
 
 @media(max-width:768px){
+    .Col{
+        margin: 0;
+    }
+    .final-row{
+        min-height: 110vh;
+    }
     .container-description-services{
         max-width: 95%;
         min-height: 25rem;
@@ -74,7 +80,8 @@
         position: relative;
     }
     .container-card-services{
+        margin-top: 2rem!important;
         flex-direction: column!important;
-        gap: 4rem;
+        gap: 6rem;
     }
 }
