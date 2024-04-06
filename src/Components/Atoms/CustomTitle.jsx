@@ -1,10 +1,9 @@
 import React from 'react';
 
-const CustomTitle = ({ text, fontSize, className }) => {
-  const style = { fontSize: fontSize };
+const CustomTitle = ({ text, className, onClick }) => {
 
   return (
-    <h2 style={style} className={className}>
+    <h2 className={className} onClick={onClick}>
       {text}
     </h2>
   );

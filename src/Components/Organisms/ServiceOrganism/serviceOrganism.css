@@ -1,0 +1,80 @@
+.service-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-background {
+    background-color: #423C38;
+    
+}
+.title-service{
+    margin-top: 5rem;
+}
+.container-card-services{
+    display: flex;
+    margin-top: 5rem;
+}
+.Col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.container-description-services {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1px;
+    text-align: center;
+    border: 0.5px rgb(158, 145, 137);
+    max-width: 50%;
+    background-color: #CBB09B;
+    height: auto;
+    min-height: 25rem;
+    padding: 3rem 4rem;
+    align-items: center;
+    position: relative;
+}
+
+.container-description-services div{
+    width: 80%;
+    position: absolute;
+    height: auto;
+    padding: 2rem 3rem;
+    min-height: 160px;
+    background-color: rgb(158, 145, 137);
+    top: 80%;
+
+}
+
+
+@media(max-width:768px){
+    .container-description-services{
+        max-width: 95%;
+        min-height: 25rem;
+        height: auto;
+        padding: 2rem 2rem;
+    }
+    .container-description-services div {
+        width: 90%;
+        padding: 2rem 2rem;
+        min-height: 150px;
+        background-color: rgb(158, 145, 137);
+        top: 95%;
+    }
+    .row-elements{
+        position: relative;
+    }
+    .container-card-services{
+        flex-direction: column!important;
+        gap: 4rem;
+    }
+}

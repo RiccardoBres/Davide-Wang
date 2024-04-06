@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Navbar, Nav } from 'react-bootstrap';
 import CustomParagraph from '../../Atoms/CustomParagraph';
 import CustomTitle from '../../Atoms/CustomTitle';
+import { useNavigate } from 'react-router-dom';
 
 const CustomNavbar = () => {
- const [isMobile, setIsMobile] = useState(false);
- const [isScrolled, setIsScrolled] = useState(false); 
+  const navigate = useNavigate();
+  const [isScrolled, setIsScrolled] = useState(false);
 
- useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); 
-    };
-    handleResize(); 
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
- }, []);
 
- useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= window.innerHeight) {
+      if (window.scrollY >= 10) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -31,26 +23,31 @@ const CustomNavbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
- }, []);
+  }, []);
 
- const handleMenuClick = () => {
-    // Implementazione dell'apertura della componente offcanvas qui
- };
 
- return (
-    <div className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <CustomTitle text='Wang' className='small-title' />
-      {isMobile ? (
-        <GiHamburgerMenu className='menu-icon' onClick={handleMenuClick} />
-      ) : (
-        <div className="container-links">
-          <CustomParagraph text='Servizi' className='small-p' />
-          <CustomParagraph text='Eventi' className='small-p' />
-          <CustomParagraph text='Contatti' className='small-p' />
-        </div>
-      )}
-    </div>
- );
+  const handleService = () => {
+    navigate('/servizi');
+  };
+  const handleHome = () => {
+    navigate('/');
+  };
+
+  return (
+    <Navbar expand="lg" className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <Navbar.Brand as="span" onClick={handleHome}><CustomTitle text='Wang' className='cursor-pointer white title-nav' /></Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className='white' />
+      <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+        <Nav>
+          <Nav className="container-links">
+            <CustomParagraph text='Servizi' onClick={handleService} className='medium-p' />
+            <CustomParagraph text='Eventi' className='medium-p' />
+            <CustomParagraph text='Contatti' className='medium-p' />
+          </Nav>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
 };
 
 export default CustomNavbar;

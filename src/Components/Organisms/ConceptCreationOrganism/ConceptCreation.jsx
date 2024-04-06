@@ -7,6 +7,8 @@ import Image2 from '../../../Layout/Assets/UtilsImages/cocktail.jpg';
 import Image3 from '../../../Layout/Assets/UtilsImages/background5.heic';
 import ConceptColumn from '../../Molecules/ConceptCreationMolecules/ConceptColumn';
 import CreationColumn from '../../Molecules/ConceptCreationMolecules/CreationColumn';
+
+
 const conceptData = [
     {
         id: 1,

@@ -32,7 +32,7 @@ h6 {
     font-family: 'Salty-Feathers-Demo' , sans-serif;
     font-weight: 500;
     font-style: italic;
-    letter-spacing: 8px;
+    margin: 0;
 }
 
 .white{
@@ -67,6 +67,11 @@ a:hover {
 }
 
 // Classi utilità
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
 .button {
     padding: 10px 20px;
     background-color: $color-amaretto;

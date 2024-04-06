@@ -12,16 +12,16 @@
   src: url("../Fonts/Salty-Feathers-Demo.otf") format("opentype");
 }
 .navbar {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 70%;
-  padding: 10px 0;
   width: 100%;
   position: fixed;
   color: rgb(252, 252, 252);
-  min-height: 70px;
   transition: background-color 1s ease;
   z-index: 99;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navbar .title-nav {
+  font-size: 1.8rem !important;
 }
 .navbar .container-links {
   display: flex;
@@ -29,26 +29,32 @@
   justify-content: center;
   gap: 2rem;
 }
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(252, 245, 250)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar .navbar-toggler-icon:focus {
+  box-shadow: none;
+}
 
 .navbar p {
   cursor: pointer;
 }
 
 .scrolled {
-  background-color: rgba(66, 60, 56, 0.5176470588);
+  background-color: #423C38;
   color: rgb(252, 252, 252);
-  backdrop-filter: blur(3px);
+  align-items: center;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    gap: 60%;
-  }
-  .scrolled {
-    height: auto;
-    min-height: auto;
-  }
-}
+/* @media(max-width:768px) {
+    .navbar{
+         gap: 60%;
+    }
+    .scrolled {
+        height: auto;
+        min-height: auto;
+    }
+} */
 .footer {
   min-height: 40vh;
   background-color: #423C38;
@@ -125,7 +131,7 @@ h6 {
   font-family: "Salty-Feathers-Demo", sans-serif;
   font-weight: 500;
   font-style: italic;
-  letter-spacing: 8px;
+  margin: 0;
 }
 
 .white {
@@ -166,6 +172,10 @@ a:hover {
   transform: scale(0);
   opacity: 0;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .button {
