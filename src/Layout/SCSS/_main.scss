@@ -2,6 +2,7 @@
 @import 'mixins';
 @import 'navbar';
 @import 'footer';
+@import 'form';
 
 /* sass --watch _main.scss output.css */
 
@@ -86,11 +87,28 @@ a:hover {
     }
 
     &:hover {
-        background-color: $color-blueberry;
-        color: $color-eggWhite;
+        background-color: $color-dark;
+        color: $color-amaretto;
     }
 }
+.empty-button {
+    padding: 10px 20px;
+    background-color: $color-dark;
+    color: $color-amaretto;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
+    &.slide-from-left {
+        @extend .slide-from-left;
+    }
+
+    &:hover {
+        background-color: $color-amaretto;
+        color: $color-dark;
+    }
+}
 .small-title {
     font-size: $text-small-title;
 }

@@ -44,7 +44,7 @@ const ServiceContent = () => {
           <CustomTitle text="I nostri servizi" className="medium-title title-service" />
           <CustomParagraph text="Siamo sempre a tuo disposizione per aiutarti nello sviluppo del tuo prodotto" className='medium-p text-center'/>
         </Col>
-        <div className="container-card-services">
+        <div className="container-card-services mt-5">
           <Col lg={4} md={6} sm={12} xs={12} className='p-0 Col'>
             {serviceMenu.map((menu) => (
               <ServiceCard key={menu.id} data={menu} />

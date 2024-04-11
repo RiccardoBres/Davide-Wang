@@ -1,19 +1,13 @@
 .container-intro h2 {
     font-weight: 500;
     font-style: normal;
-    letter-spacing: 32px;
+    letter-spacing: 8px;
 }
 
 
 
 @media(max-width:768px) {
-    .container-intro h2 {
-        font-size: 3.8rem;
-        letter-spacing: 12px;
-        font-weight: 800;
-        font-style: italic;
-    }
-
+    
     .container-intro-name {
         flex-direction: column;
     }

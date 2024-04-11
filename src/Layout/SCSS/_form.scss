@@ -1,0 +1,22 @@
+.form{
+    padding: 1rem 2rem;
+    margin: 50px;
+    background-color: $color-eggWhite;
+    border: 1px solid $color-amaretto;
+    border-radius: 15px;
+    box-shadow: 12px 11px 72px -9px rgba(36, 29, 23, 0.75);
+    -webkit-box-shadow: 12px 11px 72px -9px rgba(36, 29, 23, 0.75);
+    -moz-box-shadow: 12px 11px 72px -9px rgba(36, 29, 23, 0.75);
+
+    .form-control{
+        background-color: $color-white;
+    }
+}
+
+@media(max-width:768px){
+    .form{
+        padding: 0.5rem 1rem;
+        text-align: center;
+        margin: 10px;
+    }
+}

@@ -9,7 +9,7 @@ const ServiceCard = ({data}) => {
   return (
     <Card className='card-service'>
     <Card.Img variant="top" src={data.image} />
-    <Card.Body className='card-body'>
+    <Card.Body className='card-body-service'>
       <Card.Title>
         <CustomTitle text={data.title} className='small-title' />
       </Card.Title>

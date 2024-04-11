@@ -1,0 +1,12 @@
+.reserved-area-content{
+    min-height: 100vh;
+}
+
+.reserved-area-row{
+    background-color: #423C38;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}

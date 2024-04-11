@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
+    min-height: 75vh;
 }
 
 .container-description-services {
@@ -34,7 +34,7 @@
     flex-direction: column;
     border-radius: 1px;
     text-align: center;
-    border: 0.5px rgb(158, 145, 137);
+    border: 0.5px solid rgb(158, 145, 137);
     max-width: 50%;
     background-color: #CBB09B;
     height: auto;
@@ -44,25 +44,31 @@
     position: relative;
 }
 
-.container-description-services div{
+.container-description-services div {
     width: 80%;
     position: absolute;
     height: auto;
     padding: 2rem 3rem;
     min-height: 160px;
     background-color: rgb(158, 145, 137);
-    top: 80%;
+    border: 0.5px solid #CBB09B; 
+    top: 80%; 
+}
 
+@media(min-width:1200px) and (max-width:1919px){ 
+    .final-row {
+        min-height: 100vh;
+    }     
 }
 
 
-@media(max-width:768px){
+@media(min-width:768px) and (max-width:991px){
     .Col{
         margin: 0;
     }
-    .final-row{
-        min-height: 110vh;
-    }
+    .final-row {
+        min-height: 100vh;
+    }  
     .container-description-services{
         max-width: 95%;
         min-height: 25rem;

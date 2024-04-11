@@ -4,11 +4,12 @@ import { Navbar, Nav } from 'react-bootstrap';
 import CustomParagraph from '../../Atoms/CustomParagraph';
 import CustomTitle from '../../Atoms/CustomTitle';
 import { useNavigate } from 'react-router-dom';
+import { logout, useSession } from '../../../Middleware/ProtectedRoutes';
 
 const CustomNavbar = () => {
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const session = useSession();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,9 +26,15 @@ const CustomNavbar = () => {
     };
   }, []);
 
-
+  const userLogOut = () => {
+    logout();
+    navigate('/');
+  };
   const handleService = () => {
     navigate('/servizi');
+  };
+  const handleEvents = () => {
+    navigate('/eventi');
   };
   const handleHome = () => {
     navigate('/');
@@ -41,8 +48,11 @@ const CustomNavbar = () => {
         <Nav>
           <Nav className="container-links">
             <CustomParagraph text='Servizi' onClick={handleService} className='medium-p' />
-            <CustomParagraph text='Eventi' className='medium-p' />
+            <CustomParagraph text='Eventi' onClick={handleEvents} className='medium-p' />
             <CustomParagraph text='Contatti' className='medium-p' />
+            {session.isAuthenticated? (
+              <CustomParagraph text='Logout' onClick={userLogOut} className='medium-p' />
+            ) : null}
           </Nav>
         </Nav>
       </Navbar.Collapse>

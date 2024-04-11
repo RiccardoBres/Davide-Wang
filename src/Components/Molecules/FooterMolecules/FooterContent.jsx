@@ -1,9 +1,15 @@
 import React from 'react';
 import CustomTitle from '../../Atoms/CustomTitle';
 import CustomParagraph from '../../Atoms/CustomParagraph';
+import {useNavigate} from'react-router-dom';
 
 
 const FooterContent = () => {
+    const navigate = useNavigate();
+
+    const handleNavigation =(link)=>{
+        navigate(link);
+    }
     return (
         <div className="container-footer">
             <div className='d-flex flex-column'>
@@ -13,7 +19,7 @@ const FooterContent = () => {
             <div className='info-footer'>
                 <CustomParagraph text="Moebius" className="small-p" />
                 <CustomParagraph text="Faq" className="small-p" />
-                <CustomParagraph text="Richieste" className="small-p" />
+                <CustomParagraph text="Reserved Area" className="small-p" onClick={()=>handleNavigation('/reserved-area')} />
             </div>
             <div className='info-footer'>
                 <CustomParagraph text="Servizi" className="small-p" />

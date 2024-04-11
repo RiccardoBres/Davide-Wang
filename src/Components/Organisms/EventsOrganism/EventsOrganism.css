@@ -1,0 +1,16 @@
+.container-events-content{
+    min-height: 100vh;
+    padding: 0;
+   
+}
+.row-events-content{
+    background-color: #423C38;
+    text-align: center;
+    display: flex;
+    color: #F3EBE1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 50vh;
+}
+

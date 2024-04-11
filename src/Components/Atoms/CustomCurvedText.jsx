@@ -2,6 +2,7 @@ import React from 'react';
 import ReactCurvedText from "react-curved-text";
 import CustomParagraph from './CustomParagraph';
 import { AiOutlineAntDesign } from "react-icons/ai";
+import CustomTitle from './CustomTitle';
 
 
 const CustomCurvedText = ({ circularText, className, text, iconText }) => {
@@ -23,7 +24,7 @@ const CustomCurvedText = ({ circularText, className, text, iconText }) => {
                 text={circularText}
             />
             <AiOutlineAntDesign />
-            <CustomParagraph text={text} className="big-p m-0" />
+            <CustomTitle text={text} className="medium-title m-0" />
         </div>
 
     );
