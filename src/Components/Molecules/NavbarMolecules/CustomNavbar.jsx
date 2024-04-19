@@ -10,7 +10,7 @@ const CustomNavbar = () => {
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [showOffCanvas, setShowOffCanvas] = useState(false);
-  const [showLinks, setShowLinks] = useState(false); // Stato per gestire la visualizzazione dei titoletti
+  const [showLinks, setShowLinks] = useState(false); 
   const session = useSession();
 
   useEffect(() => {
@@ -53,9 +53,9 @@ const CustomNavbar = () => {
   return (
     <>
       <Navbar  expand="lg" className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-        <Navbar.Brand onClick={handleHome}><CustomTitle text='Wang' className='small-title white cursor-pointer'/></Navbar.Brand>
+        <Navbar.Brand onClick={handleHome}><CustomTitle text='D W' className='small-title white cursor-pointer'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='white' onClick={handleToggleClick} />
-        <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
+       {showOffCanvas ? <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
           <Nav className='container-links'>
             <CustomParagraph text='Servizi' onClick={handleService} className='medium-p' />
             <CustomParagraph text='Eventi' onClick={handleEvents} className='medium-p' />
@@ -64,7 +64,7 @@ const CustomNavbar = () => {
               <CustomParagraph text='Logout' onClick={userLogOut} className='medium-p' />
             ) : null}
           </Nav>
-        </Navbar.Collapse>
+        </Navbar.Collapse> : null}
         <OffCanvas show={showOffCanvas} onHide={() => setShowOffCanvas(false)} />
       </Navbar>
 

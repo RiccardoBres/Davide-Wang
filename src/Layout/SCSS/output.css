@@ -36,6 +36,10 @@
 .navbar .navbar-toggler-icon:focus {
   box-shadow: none;
 }
+.navbar .navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+}
 
 .navbar p {
   cursor: pointer;

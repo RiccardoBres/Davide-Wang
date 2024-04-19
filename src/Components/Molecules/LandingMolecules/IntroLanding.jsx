@@ -9,7 +9,7 @@ const IntroLanding = () => {
     return (
         <div className="container-intro">
             <div className='div1'>
-                <CustomParagraph text="Creator & Consultant" className='small-p white m-0' />
+                <CustomParagraph text="Creator & Consultant" className='small-p white m-0 first-t' />
             </div>
 
             <div className="container-intro-name div3">
