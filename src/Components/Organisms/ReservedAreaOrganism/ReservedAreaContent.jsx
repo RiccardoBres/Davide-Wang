@@ -1,13 +1,26 @@
-import React from 'react';
+import {useEffect} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Col, Row, Container } from 'react-bootstrap';
 import './ReservedAreaOrganism.css';
 import CustomTitle from '../../Atoms/CustomTitle';
 import { useSession } from '../../../Middleware/ProtectedRoutes';
 import CustomParagraph from '../../Atoms/CustomParagraph';
+import { allEvent, getEvents, deleteEvent } from '../../../States/EventState';
 import EventForm from '../../Molecules/ReservedAreaMolecules/EventForm';
+import EventTable from '../../Molecules/ReservedAreaMolecules/EventTable';
 
 const ReservedAreaContent = () => {
+  const dispatch = useDispatch();
+  const events = useSelector(allEvent);
   const session = useSession();
+
+  const deleteEventAction = (id) => {
+    dispatch(deleteEvent(id));
+};
+
+  useEffect(() => {
+    dispatch(getEvents());
+  }, [events]);
   return (
     <Container fluid className="reserved-area-content">
       <Row className='reserved-area-row'>
@@ -19,10 +32,11 @@ const ReservedAreaContent = () => {
         </Col>
       </Row>
       <Row className='py-5'>
-        <Col lg={6} md={6} sm={12} xs={12}>
+        <Col lg={4} md={4} sm={12} xs={12}>
           <EventForm />
         </Col>
-        <Col lg={6} md={6} sm={12} xs={12}>
+        <Col lg={8} md={8} sm={12} xs={12}>
+          <EventTable events={events.events} onDelete={deleteEventAction} />
         </Col>
       </Row>
     </Container>

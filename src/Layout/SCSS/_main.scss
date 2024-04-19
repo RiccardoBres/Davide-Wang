@@ -3,6 +3,7 @@
 @import 'navbar';
 @import 'footer';
 @import 'form';
+@import 'table';
 
 /* sass --watch _main.scss output.css */
 
@@ -68,7 +69,12 @@ a:hover {
 }
 
 // Classi utilità
-
+.hide{
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+}
 .cursor-pointer{
     cursor: pointer;
 }
@@ -95,7 +101,7 @@ a:hover {
     padding: 10px 20px;
     background-color: $color-dark;
     color: $color-amaretto;
-    border: none;
+    border: 0.1px solid $color-dark;
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -107,6 +113,7 @@ a:hover {
     &:hover {
         background-color: $color-amaretto;
         color: $color-dark;
+        border: 0.1px groove $color-dark;
     }
 }
 .small-title {

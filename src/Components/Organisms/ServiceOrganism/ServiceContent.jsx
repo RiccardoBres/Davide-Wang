@@ -45,17 +45,17 @@ const ServiceContent = () => {
           <CustomParagraph text="Siamo sempre a tuo disposizione per aiutarti nello sviluppo del tuo prodotto" className='medium-p text-center'/>
         </Col>
         <div className="container-card-services mt-5">
-          <Col lg={4} md={6} sm={12} xs={12} className='p-0 Col'>
+          <Col lg={4} md={12} sm={12} xs={12} className='p-0 Col'>
             {serviceMenu.map((menu) => (
               <ServiceCard key={menu.id} data={menu} />
             ))}
           </Col>
-          <Col lg={4} md={6} sm={12} xs={12} className='p-0 Col mb-5'>
+          <Col lg={4} md={12} sm={12} xs={12} className='p-0 Col second-card'>
             {serviceConcept.map((menu) => (
               <ServiceCard key={menu.id} data={menu} />
             ))}
           </Col>
-          <Col lg={4} md={6} sm={12} xs={12} className='p-0 Col'>
+          <Col lg={4} md={12} sm={12} xs={12} className='p-0 Col'>
             {serviceConsulting.map((menu) => (
               <ServiceCard key={menu.id} data={menu} />
             ))}

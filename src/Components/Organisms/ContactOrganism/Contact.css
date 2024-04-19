@@ -1,0 +1,88 @@
+.container-contact {
+    min-height: 110vh;
+    padding-bottom: 8rem;
+    height: fit-content;
+
+}
+
+.first-row-contact {
+    background-image: linear-gradient(to right top, #423c38, #5a5049, #73655b, #8c7b6e, #a79181, #af9988, #b8a090, #c0a897, #b8a294, #af9c90, #a7978d, #9e9189);
+    text-align: center;
+    display: flex;
+    color: #F3EBE1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 50vh;
+    position: relative;
+
+}
+
+.second-row-contact {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+}
+
+.col-relative {
+    position: relative;
+}
+
+.form-contact {
+    position: relative;
+    height: auto;
+    width: 60%;
+    z-index: 98;
+    padding: 25px 30px 30px 25px;
+    background-color: #736357;
+    color: #F3EBE1;
+}
+
+.intro-contact {
+    left: 50%;
+    position: absolute;
+    height: 450px;
+    width: 650px;
+    z-index: 98;
+    padding: 60px 50px 50px 60px;
+    background-color: #b79982;
+    color: #F3EBE1;
+}
+
+.col-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+    .second-row-contact {
+        top: 40%;
+    }
+
+    .container-contact {
+        min-height: 130vh;
+    }
+
+    .intro-contact {
+        /* top: 95%;
+        left: 5%;
+        height: auto;
+        width: 90%;
+        padding: 1rem 2rem;
+        max-height: 200px;
+        overflow: auto; */
+        display: none;
+    }
+
+    .form-contact {
+        position: relative;
+        height: auto;
+        width: auto;
+
+    }
+
+    .col-contact {
+        flex-direction: column;
+    }
+}

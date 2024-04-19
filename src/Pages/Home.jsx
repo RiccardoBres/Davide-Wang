@@ -6,10 +6,13 @@ import BeverageConsulting from '../Components/Organisms/BeverageConsultingOrgani
 import ConceptCreation from '../Components/Organisms/ConceptCreationOrganism/ConceptCreation';
 import Experience from '../Components/Organisms/ExperienceOrganism/Experience';
 import Footer from '../Components/Organisms/FooterOrganism/Footer';
+import useScrollToTop from '../CustomHooks/UseScrollToTop';
 
 
 
 const Home = () => {
+  useScrollToTop();
+
   return (
     <>
       <CustomNavbar />

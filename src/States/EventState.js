@@ -57,7 +57,7 @@ export const createEvent = createAsyncThunk(
 
 export const deleteEvent = createAsyncThunk(
     'event/deleteEvent',
-    async (eventID) => {
+    async (eventID, {dispatch}) => {
         try {
             const token = JSON.parse(localStorage.getItem('userLoggedIn'));
             const res = await axios.delete(`${process.env.REACT_APP_SERVER_BASE_URL}/delete/event/${eventID}`, {
@@ -65,6 +65,7 @@ export const deleteEvent = createAsyncThunk(
                     'Authorization': token,
                 },
             });
+            dispatch(getEvents());
             return res.data;
         } catch (error) {
             console.log(error);

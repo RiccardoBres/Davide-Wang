@@ -5,17 +5,20 @@ import Service from './Pages/Service';
 import Events from './Pages/Events';
 import ReservedArea from './Pages/ReservedArea';
 import ProtectedRouter from './Middleware/ProtectedRoutes';
+import Contacts from './Pages/Contacts';
 
 
 const App = () => {
+
   return (
     <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/servizi" element={<Service />} />
-        <Route exact path="/eventi" element={<Events />} />
+        <Route path="/servizi" element={<Service />} />
+        <Route path="/eventi" element={<Events />} />
+        <Route path="/contatti" element={<Contacts />} />
         <Route element={<ProtectedRouter />}>
-          <Route exact path="/reserved-area" element={<ReservedArea />} />
+          <Route path="/reserved-area" element={<ReservedArea />} />
         </Route>
       </Routes>
     </Router>

@@ -6,8 +6,7 @@
 }
 
 .first-background {
-    background-color: #423C38;
-    
+    background-image: linear-gradient(to right top, #f3ebe1, #ebe0d3, #e4d5c6, #dccab9, #d5bfac, #c5af9d, #b6a08f, #a79181, #8c7b6e, #73655b, #5a5049, #423c38);
 }
 .title-service{
     margin-top: 5rem;
@@ -54,22 +53,24 @@
     border: 0.5px solid #CBB09B; 
     top: 80%; 
 }
-
-@media(min-width:1200px) and (max-width:1919px){ 
+.second-card{
+    margin-bottom: 3rem;
+}
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
     .final-row {
         min-height: 100vh;
-    }     
+    }
 }
 
-
-@media(min-width:768px) and (max-width:991px){
-    .Col{
+/* Media query per schermi tra 768px e 991px */
+@media screen and (max-width: 991px) {
+    .Col {
         margin: 0;
     }
     .final-row {
         min-height: 100vh;
-    }  
-    .container-description-services{
+    }
+    .container-description-services {
         max-width: 95%;
         min-height: 25rem;
         height: auto;
@@ -82,12 +83,20 @@
         background-color: rgb(158, 145, 137);
         top: 95%;
     }
-    .row-elements{
+    .row-elements {
         position: relative;
     }
-    .container-card-services{
-        margin-top: 2rem!important;
-        flex-direction: column!important;
+    .container-card-services {
+        margin-top: 2rem !important;
+        flex-direction: column !important;
+        justify-content: center;
         gap: 6rem;
+    }
+    
+}
+
+@media(max-width: 768px){
+    .second-card{
+        margin-bottom: 0rem!important;
     }
 }

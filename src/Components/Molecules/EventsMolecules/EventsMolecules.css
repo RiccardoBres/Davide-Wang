@@ -22,7 +22,7 @@
     color: black;
     overflow: auto;
     padding: 3rem;
-    gap: 3rem;
+    gap: 1rem;
     
 }
 .event-info::-webkit-scrollbar{

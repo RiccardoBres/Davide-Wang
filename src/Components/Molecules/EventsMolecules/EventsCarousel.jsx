@@ -26,8 +26,8 @@ const EventCarousel = ({ events }) => {
                         {Array.isArray(event.images) && event.images.length > 1 ? (
                             <Slider {...settings}>
                                 {event.images?.map((image, i) => (
-                                    <div className="container-image-carousel">
-                                        <CustomImage key={i} src={image} alt={image.i} />
+                                    <div className="container-image-carousel" key={image.id || i}>
+                                        <CustomImage key={image.id || i} src={image} alt={image.i} />
                                     </div>
                                 ))}
                             </Slider>

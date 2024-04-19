@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Container, Spinner } from 'react-bootstrap';
 import './EventsOrganism.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getEvents, allEvent, eventError, isEventLoading } from '../../../States/EventState';
@@ -12,19 +12,12 @@ const EventsContent = () => {
     const event = useSelector(allEvent).events;
     const isLoading = useSelector(isEventLoading);
     const error = useSelector(eventError);
-    
+
     useEffect(() => {
         console.log(event);
         dispatch(getEvents());
     }, [dispatch]);
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
     const sortedEvents = event ? [...event].sort((a, b) => new Date(b.date) - new Date(a.date)) : [];
 
 
@@ -36,7 +29,18 @@ const EventsContent = () => {
                     <CustomParagraph text="Scopri gli ultimi eventi organizzati dalla nostra community" className="medium-p" />
                 </Col>
             </Row>
-            <EventsCarousel events={sortedEvents} />
+            {isLoading ? (
+                <>
+                    <div className="w-100 d-flex align-items-center justify-content-center my-5">
+                        <Spinner animation="border" role="status">
+                        </Spinner>
+                    </div>
+                </>
+            ) : error ? (
+                <CustomParagraph text='Ops! Qualcosa è andato storto. Riprova tra 5 minuti.' className="medium-p" />
+            ) : (
+                <EventsCarousel events={sortedEvents} />
+            )}
         </Container>
     );
 };

@@ -1,11 +1,10 @@
 .container-events-content{
-    min-height: 100vh;
-    padding: 0;
+    min-height: 100vh!important;
+    padding-bottom: 5rem;
    
 }
 .row-events-content{
-    background-color: #423C38;
-    text-align: center;
+    background-image: linear-gradient(to right top, #423c38, #5a5049, #73655b, #8c7b6e, #a79181, #af9988, #b8a090, #c0a897, #b8a294, #af9c90, #a7978d, #9e9189);    text-align: center;
     display: flex;
     color: #F3EBE1;
     align-items: center;

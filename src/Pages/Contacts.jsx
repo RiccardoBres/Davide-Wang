@@ -1,20 +1,18 @@
 import React from 'react';
 import CustomNavbar from '../Components/Molecules/NavbarMolecules/CustomNavbar';
 import Footer from '../Components/Organisms/FooterOrganism/Footer';
-import ReservedAreaContent from '../Components/Organisms/ReservedAreaOrganism/ReservedAreaContent';
 import useScrollToTop from '../CustomHooks/UseScrollToTop';
+import ContactContent from '../Components/Organisms/ContactOrganism/ContactContent';
 
-
-const ReservedArea = () => {
-  useScrollToTop();
-
+const Contacts = () => {
+    useScrollToTop();
   return (
     <>
     <CustomNavbar />
-    <ReservedAreaContent/>
-    <Footer />
+    <ContactContent/>
+    <Footer/>
     </>
   )
 }
 
-export default ReservedArea
+export default Contacts

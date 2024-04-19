@@ -16,7 +16,7 @@ const IntroLanding = () => {
                 
                 <div className="d-flex flex-column align-items-center">
                     <CustomTitle text="Davide" className='big-title white m-0' />
-                    <CustomTitle text="WANG" className='very-big-title white' />
+                    <CustomTitle text="WANG" className='very-big-title white title' />
                 </div>
             </div>
             <div className="div5">
