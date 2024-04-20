@@ -1,6 +1,6 @@
 /* EventCarousel.css */
 .container-carousel{
-    padding-top: 5rem;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,12 +8,9 @@
 }
 .row-carousel{
     width: 100%;
-    margin: 50px 0;
-   
 }
 .slick-slider {
     width: 100%;
-    
 }
 .event-info{
     display: flex;

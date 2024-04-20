@@ -15,7 +15,7 @@ const CustomCurvedText = ({ circularText, className, text, iconText }) => {
                 cy={120}
                 rx={100}
                 ry={100}
-                startOffset={120}
+                startOffset={119}
                 textPathProps={{
                     fill: '#fff',
                     fontSize: '20px'

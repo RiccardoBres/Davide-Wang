@@ -12,13 +12,11 @@ const IntroLanding = () => {
                 <CustomParagraph text="Creator & Consultant" className='small-p white m-0 first-t' />
             </div>
 
-            <div className="container-intro-name div3">
                 
-                <div className="d-flex flex-column align-items-center">
+                <div className="d-flex flex-column align-items-center w-100 justify-content-center">
                     <CustomTitle text="Davide" className='big-title white m-0' />
                     <CustomTitle text="WANG" className='very-big-title white title' />
                 </div>
-            </div>
             <div className="div5">
                 <CustomCurvedText circularText="Beverage" text="Consulting" className='small-p white' />
                 <CustomCurvedText circularText="Concept" text="Creation" className='small-p white' />

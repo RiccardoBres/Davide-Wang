@@ -52,11 +52,12 @@ const CustomNavbar = () => {
 
   return (
     <>
-      <Navbar  expand="lg" className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <Navbar expand="lg" className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <Navbar.Brand onClick={handleHome}><CustomTitle text='D W' className='small-title white cursor-pointer'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='white' onClick={handleToggleClick} />
-       {showOffCanvas ? <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
-          <Nav className='container-links'>
+        <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
+          {/* Nascondi i NavLinks solo se la larghezza dello schermo è inferiore a 992px */}
+          <Nav className={`container-links ${window.innerWidth < 992 ? 'd-none' : ''}`}>
             <CustomParagraph text='Servizi' onClick={handleService} className='medium-p' />
             <CustomParagraph text='Eventi' onClick={handleEvents} className='medium-p' />
             <CustomParagraph text='Contatti' onClick={handleContact} className='medium-p' />
@@ -64,10 +65,9 @@ const CustomNavbar = () => {
               <CustomParagraph text='Logout' onClick={userLogOut} className='medium-p' />
             ) : null}
           </Nav>
-        </Navbar.Collapse> : null}
+        </Navbar.Collapse> 
         <OffCanvas show={showOffCanvas} onHide={() => setShowOffCanvas(false)} />
       </Navbar>
-
     </>
   );
 };
