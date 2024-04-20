@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './offCanvas.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CustomButton from '../../Atoms/CustomButton';
+import CustomInput from '../../Atoms/CustomInput';
 import CustomParagraph from '../../Atoms/CustomParagraph';
 import CustomTitle from '../../Atoms/CustomTitle'
 import { useSession, logout } from '../../../Middleware/ProtectedRoutes';
@@ -11,7 +12,7 @@ import { faSpotify, faInstagram, faFacebook, faTwitter, faYoutube } from '@forta
 
 
 const OffCanvas = ({ show, onHide }) => {
-    const policy = "By signing up you agree to receive news and offers from Group Name. You can unsubscribe at any time. For more details see the privacy policy.";
+    const policy = "By signing up you agree to receive news and offers from Wanghez. You can unsubscribe at any time. For more details see the privacy policy.";
     const navigate = useNavigate();
     const session = useSession();
     const handleHome = () => {navigate('/')};
@@ -34,17 +35,16 @@ const OffCanvas = ({ show, onHide }) => {
                     {session.isAuthenticated == true ?  <Nav.Link className='link-ofCanvas-left' onClick={handleLogout}>Logout</Nav.Link> : null }
                 </Nav>
                 <div className="social-icons-offCanvas">
-                    <FontAwesomeIcon icon={faSpotify} />
                     <FontAwesomeIcon icon={faInstagram} />
                     <FontAwesomeIcon icon={faFacebook} />
                     <FontAwesomeIcon icon={faTwitter} />
                     <FontAwesomeIcon icon={faYoutube} />
                 </div>
                 <div className='container-mailing-input-left'>
-                    {/* <div className="container-input-left">
+                    <div className="container-input-left">
                         <CustomInput text='Indirizzo Email' />
                         <CustomButton text="Registrati"/>
-                    </div> */}
+                    </div> 
                     <CustomParagraph text={policy} className='text-light' />
                 </div>
             </Offcanvas.Body>

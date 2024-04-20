@@ -14,7 +14,7 @@ const ServiceContent = () => {
     {
       id: 1,
       title: "Progettazione",
-      text: "Description for Ideazione Menu 1",
+      text: "Description for Ideazione Menu",
       image: Image1
     },
   ];
@@ -23,7 +23,7 @@ const ServiceContent = () => {
     {
       id: 2,
       title: "Creazione",
-      text: "Description for Concept Creation 2",
+      text: "Description for Concept Creation",
       image: Image2
     },
   ];

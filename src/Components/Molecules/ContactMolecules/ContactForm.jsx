@@ -77,7 +77,7 @@ const ContactForm = () => {
                     />
                 </Form.Group>
                 <div className="w-100 d-flex justify-content-center">
-                <CustomButton text='Invia' className='button my-3' type='submit' />
+                <CustomButton text='Invia' className='button mt-3' type='submit' />
                 </div>
             </Form>
         </>
