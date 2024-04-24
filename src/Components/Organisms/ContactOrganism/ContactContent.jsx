@@ -12,8 +12,7 @@ const ContactContent = () => {
     <Container fluid className='container-contact'>
       <Row className='first-row-contact'>
         <Col lg={12} md={12} sm={12} xs={12}>
-          <CustomTitle text='Contatti' className='medium-title' />
-          <CustomParagraph text='In caso di domande, richieste o segnalazioni, non esitare a contattarci.' className='medium-p' />
+          <CustomTitle text='Contatti' className='big-title' />
         </Col>
       </Row>
       <Row className='second-row-contact'>

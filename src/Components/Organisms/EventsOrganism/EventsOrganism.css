@@ -13,3 +13,8 @@
     min-height: 50vh;
 }
 
+@media screen and (max-width: 991px) {
+    .row-events-content h2{
+        font-size: 4rem;
+    }
+}

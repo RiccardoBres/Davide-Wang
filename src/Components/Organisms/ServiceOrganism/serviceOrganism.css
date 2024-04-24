@@ -1,47 +1,44 @@
-.service-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 5rem;
-}
 
 .first-background {
     background-image: linear-gradient(to right top, #f3ebe1, #ebe0d3, #e4d5c6, #dccab9, #d5bfac, #c5af9d, #b6a08f, #a79181, #8c7b6e, #73655b, #5a5049, #423c38);
+    max-height: 50vh;
+    min-height: 50vh;
 }
-.title-service{
-    margin-top: 5rem;
-}
+
 .container-card-services{
     display: flex;
-    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
 }
+
 .Col {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.final-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 75vh;
+.second-row {
+    padding-bottom: 20rem;
+    padding-top: 5rem;
 }
-
+.final-row{
+    min-height: 100vh;
+    padding: 5rem 0;
+    
+}
 .container-description-services {
     display: flex;
+    position: absolute;
+    top: 35%;
     flex-direction: column;
     border-radius: 1px;
-    text-align: center;
-    border: 0.5px solid rgb(158, 145, 137);
-    max-width: 50%;
-    background-color: #CBB09B;
+    text-align: justify;
+    max-width: 75%;
+    background-color: #736357;
     height: auto;
     min-height: 25rem;
     padding: 3rem 4rem;
     align-items: center;
-    position: relative;
 }
 
 .container-description-services div {
@@ -50,54 +47,76 @@
     height: auto;
     padding: 2rem 3rem;
     min-height: 160px;
-    background-color: rgb(158, 145, 137);
-    border: 0.5px solid #CBB09B; 
+    background-color: #CBB09B;
     top: 80%; 
 }
-.second-card{
-    margin-bottom: 3rem;
-}
-@media screen and (min-width: 1200px) and (max-width: 1919px) {
-    .final-row {
-        min-height: 100vh;
-    }
+
+.container-description-services div h2{
+    text-align: center; 
 }
 
-/* Media query per schermi tra 768px e 991px */
+.second-card{
+    margin-bottom:7rem;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+    .second-row {
+/*         min-height: 100vh;
+ */    }
+}
+
 @media screen and (max-width: 991px) {
+    .second-row{
+        padding-bottom: 15rem;
+    }
+
     .Col {
         margin: 0;
     }
-    .final-row {
-        min-height: 100vh;
-    }
+
     .container-description-services {
         max-width: 95%;
         min-height: 25rem;
         height: auto;
         padding: 2rem 2rem;
+        display: none;
     }
+
     .container-description-services div {
         width: 90%;
         padding: 2rem 2rem;
         min-height: 150px;
         background-color: rgb(158, 145, 137);
         top: 95%;
+        display: none;
     }
+
     .row-elements {
         position: relative;
     }
+
     .container-card-services {
         margin-top: 2rem !important;
         flex-direction: column !important;
         justify-content: center;
-        gap: 6rem;
+        gap: 15rem;
     }
-    
+
+    .title-service{
+        text-align: center;
+        font-size: 4rem!important;
+    }
 }
 
 @media(max-width: 768px){
     .second-card{
         margin-bottom: 0rem!important;
+    }
+    .final-row p{
+        width: 100%!important;
+        padding: 0;
+    }
+    .final-row .col-intro{
+        padding: 3rem;
     }
 }

@@ -25,8 +25,7 @@ const EventsContent = () => {
         <Container fluid className='container-events-content'>
             <Row className='row-events-content '>
                 <Col lg={12} md={12} sm={12} xs={12}>
-                    <CustomTitle text="I nostri eventi" className="medium-title" />
-                    <CustomParagraph text="Scopri gli ultimi eventi organizzati dalla nostra community" className="medium-p" />
+                    <CustomTitle text="I nostri eventi" className="big-title" />
                 </Col>
             </Row>
             {isLoading ? (
