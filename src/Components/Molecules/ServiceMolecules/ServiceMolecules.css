@@ -18,11 +18,11 @@
 .card-body-service {
     padding: 2rem 3rem;
     position: absolute;
-    background-image: linear-gradient(to right top, #423c38, #5a5049, #73655b, #8c7b6e, #a79181, #af9988, #b8a090, #c0a897, #b8a294, #af9c90, #a7978d, #9e9189);    text-align: center;
+    background-image: linear-gradient(to right top, #f3ebe1, #ebe0d3, #e4d5c6, #dccab9, #d5bfac, #c5af9d, #b6a08f, #a79181, #8c7b6e, #73655b, #5a5049, #423c38);
     width: 95%;
     height: auto;
     border-radius: 3px;
-    color: #F3EBE1;
+    color: #F3EBE1!important;
     transition: box-shadow 0.5s ease-in;
     box-shadow: 12px 11px 72px -9px rgba(36, 29, 23, 0.75);
     -webkit-box-shadow: 12px 11px 72px -9px rgba(36, 29, 23, 0.75);
