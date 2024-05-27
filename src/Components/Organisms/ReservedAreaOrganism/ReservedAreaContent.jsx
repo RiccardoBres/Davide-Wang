@@ -25,10 +25,9 @@ const ReservedAreaContent = () => {
     <Container fluid className="reserved-area-content">
       <Row className='reserved-area-row'>
         <Col lg={12} md={12} sm={12} xs={12}>
-        <CustomTitle text={`Benvenuto nella tua area riservata zio ${session.decodedSession.name}`} className='reserved-area-title medium-title text-center white' />
-        <CustomParagraph text='Qui puoi trovare il form da compilare per aggiungere gli ultimi eventi al quale ai partecipato nella tua pagina' className='reserved-area-p medium-p text-center white mt-5' />
-        <CustomParagraph text='Ogni volta che hai finito di aggiungere gli ultimi eventi ricordati di fare il logout attraverso la navbar' className='reserved-area-p medium-p text-center white mt-5' />
-        <CustomParagraph text='Per qualsiasi problema sai già chi chiamare FRATM.' className='reserved-area-p medium-p text-center white mt-5' />
+        <CustomTitle text={`Benvenuto nella tua area riservata ${session.decodedSession.name}`} className='reserved-area-title medium-title text-center white mb-5' />
+        <CustomParagraph text='Qui puoi trovare il form da compilare per aggiungere gli ultimi eventi al quale ai partecipato nella tua pagina.' className='reserved-area-p medium-p text-center white' />
+        <CustomParagraph text='Ogni volta che hai finito di aggiungere gli ultimi eventi ricordati di fare il logout attraverso la navbar.' className='reserved-area-p medium-p text-center white' />
         </Col>
       </Row>
       <Row className='py-5'>

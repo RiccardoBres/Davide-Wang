@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { loginUser, isAuthenticated, loginError } from '../../../States/LoginState';
+import { loginUser, isAuthenticated, loginError, loginLoading } from '../../../States/LoginState';
 import CustomButton from '../../Atoms/CustomButton';
 
 const ModalLogin = ({ showModal, setShowModal }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate()
     const loggedIn = useSelector(isAuthenticated);
+    const isLoading = useSelector(loginLoading);
     const error = useSelector(loginError);
 
     const [email, setEmail] = useState('');
@@ -62,7 +63,7 @@ const ModalLogin = ({ showModal, setShowModal }) => {
                                 required
                             />
                         </Form.Group>
-                        <CustomButton text='Submit' type='submit' className='button mt-3' />
+                        <CustomButton text={isLoading ? 'Loading..' : 'Submit'} type='submit' className='button mt-3' />
                         {error && <p>{error}</p>}
                     </Form>
                 </Modal.Body>

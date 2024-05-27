@@ -19,7 +19,7 @@ const ContactContent = () => {
         <Col lg={8} md={12} sm={12} xs={12} className='col-contact'>
           <div className="form-contact">
             <CustomTitle text="Contact Title" className="medium-title" />
-            <CustomParagraph text="Experience description lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus." className='mb-4' />
+            <CustomParagraph text="Experience description lorem ipsum dolor sit amet." className='mb-4' />
             <ContactForm />
           </div>
           <div className="intro-contact">
